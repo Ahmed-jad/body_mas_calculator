@@ -23,15 +23,17 @@ class MainDrawer extends StatelessWidget {
                     margin: EdgeInsets.only(
                       top:30,
                     ),
-                    decoration: BoxDecoration(
+                    decoration: new BoxDecoration(
                       shape: BoxShape.circle,
-                      image: DecorationImage(image: NetworkImage('https://www.pexels.com/photo/man-in-black-jacket-771742/'), 
+                      image: new DecorationImage(image: new AssetImage('assets/ahmed.jpg'), 
+                     // image: DecorationImage(image: AssetImage('assets/ahmed.jpg')),
                        fit:BoxFit.fill,
+                      ),
                       ),
                       
                     ),
                     
-                  ),
+                  
                   Text('Ahmed jaad', style: TextStyle(fontSize: 32, color: Colors.white),),
                    Text('Ahmed@gmail.com', style: TextStyle(fontSize: 19, color: Colors.white),),
                 ],
