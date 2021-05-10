@@ -19,7 +19,7 @@ class RightBar extends StatelessWidget {
               topLeft:Radius.circular(20),
               bottomLeft: Radius.circular(20),
             ),
-            color: accentHexColor,
+            color: Colors.redAccent,
           ),
         )
       ],

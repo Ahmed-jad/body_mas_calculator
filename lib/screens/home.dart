@@ -1,5 +1,4 @@
 import 'package:body_mas_app/constants/app_constants.dart';
-import 'package:body_mas_app/screens/main_drawer.dart';
 import 'package:body_mas_app/widgets/left_bar.dart';
 import 'package:body_mas_app/widgets/right_bar.dart';
 import 'package:flutter/material.dart';
@@ -32,8 +31,46 @@ import 'package:flutter/material.dart';
          centerTitle: true,
 
        ),
-       drawer: MainDrawer(),
-         
+        drawer: Drawer(  
+        child: ListView(  
+          // Important: Remove any padding from the ListView.  
+          padding: EdgeInsets.zero,  
+          children: <Widget>[  
+            UserAccountsDrawerHeader(  
+              accountName: Text("Ahmed jaad"),  
+              accountEmail: Text("jaad12@gmail.com"),  
+              currentAccountPicture: CircleAvatar(  
+                backgroundColor: Colors.orange,  
+                child: Text(  
+                  "A",  
+                  style: TextStyle(fontSize: 40.0),  
+                ),  
+              ),  
+            ),  
+            ListTile(  
+              leading: Icon(Icons.home), title: Text("Home"),  
+              onTap: () {  
+                Navigator.pop(context);  
+              },  
+            ),  
+            ListTile(  
+              leading: Icon(Icons.add_box_outlined), title: Text("About us"),  
+              onTap: () {  
+                //Navigator.pop(context);  
+                Navigator.popAndPushNamed(context, '/about');
+              },  
+            ),  
+            ListTile(  
+              leading: Icon(Icons.contacts), title: Text("Contact Us"),  
+              onTap: () {  
+                //Navigator.pop(context);  
+                 Navigator.popAndPushNamed(context, '/contact_me');
+              },  
+            ),  
+          ],  
+        ),  
+      ),  
+  
        backgroundColor: mainHexColor,
        body: SingleChildScrollView(
           child: Column(
